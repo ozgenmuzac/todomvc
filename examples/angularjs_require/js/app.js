@@ -5,14 +5,14 @@ require([
 	'angular'
 ], function (angular) {
 	require([
-		'controllers/todo', 
+		'controllers/bmo-uye-controller', 
 		'directives/todoFocus', 
 		'directives/todoEscape',
 		'services/todoStorage'
-	], function (todoCtrl, todoFocusDir, todoEscapeDir, todoStorageSrv) {
+	], function (bmoUyeController, todoFocusDir, todoEscapeDir, todoStorageSrv) {
 		angular
-			.module('todomvc', [todoFocusDir, todoEscapeDir, todoStorageSrv])
-			.controller('TodoController', todoCtrl);
-		angular.bootstrap(document, ['todomvc']);			
+			.module('bmoUye', [todoFocusDir, todoEscapeDir, todoStorageSrv])
+			.controller('BmoUyeController', bmoUyeController);
+		angular.bootstrap(document, ['bmoUye']);			
 	});	
 });
